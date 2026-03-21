@@ -11,6 +11,8 @@ int main()
 		//Menu
 		cout << "1 - Addition numbers\n";
 		cout << "2 - Subtract numbers\n";
+		cout << "3 - Multiply numbers\n";
+		cout << "4 - Divide numbers\n";
 		cout << "0 - Exit\n";
 		cout << "Choose: \n";
 		cin >> choice;
@@ -19,7 +21,7 @@ int main()
 			cout << "Exiting program...." << endl;
 			break;
 		}
-		else if (choice == 1 || choice == 2)
+		else if (choice == 1 || choice == 2 || choice == 3 || choice == 4)
 		{
 			cout << "Enter first number: ";
 			cin >> a;
@@ -29,8 +31,17 @@ int main()
 
 			if (choice == 1)
 				cout << "Total is: " << a + b << endl;
-			else
+			else if (choice == 2)
 				cout << "Total is: " << a - b << endl;
+			else if (choice == 3)
+				cout << "Total is: " << a * b << endl;
+			else if (choice == 4)
+			{
+				if (b == 0)
+					cout << "Cannot divide by zero" << endl;
+				else
+					cout << "Total is: " << a / b << endl;
+			}
 		}
 		else
 		{
